@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>filter img gallery</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="gallery">
+          <ul class="control">
+              <li class="button active" data-filter="all">all</li>
+              <li class="button" data-filter="camera">camera</li>
+              <li class="button" data-filter="headphone">headphone</li>
+              <li class="button" data-filter="mobile">mobile</li>
+              <li class="button" data-filter="shoe">shoe</li>
+              <li class="button" data-filter="watch">watch</li>
+          </ul>
+
+          <div class="img-container">
+              <a href="img/camera1.jpg" class="img camera">
+                  <img src="img/camera1.jpg" alt="">
+              </a>
+              <a href="img/camera2.jpg" class="img camera">
+                <img src="img/camera2.jpg" alt="">
+            </a>
+            <a href="img/camera3.jpg" class="img camera">
+                <img src="img/camera3.jpg" alt="">
+            </a>
+            <a href="img/headphone1.jpg" class="img headphone">
+                <img src="img/headphone1.jpg" alt="">
+            </a>
+            <a href="img/headphone2.jpg" class="img headphone">
+                <img src="img/headphone2.jpg" alt="">
+            </a>
+            <a href="img/headphone3.jpg" class="img headphone">
+                <img src="img/headphone3.jpg" alt="">
+            </a>
+            <a href="img/headphone4.jpg" class="img headphone">
+                <img src="img/headphone4.jpg" alt="">
+            </a>
+            <a href="img/mobile1.jpg" class="img mobile">
+                <img src="img/mobile1.jpg" alt="">
+            </a>
+            <a href="img/mobile2.jpg" class="img mobile">
+                <img src="img/mobile2.jpg" alt="">
+            </a>
+            <a href="img/mobile3.jpg" class="img mobile">
+                <img src="img/mobile3.jpg" alt="">
+            </a>
+            <a href="img/mobile4.jpg" class="img mobile">
+                <img src="img/mobile4.jpg" alt="">
+            </a>
+            <a href="img/shoe1.jpg" class="img shoe">
+                <img src="img/shoe1.jpg" alt="">
+            </a>
+            <a href="img/shoe2.jpg" class="img shoe">
+                <img src="img/shoe2.jpg" alt="">
+            </a>
+            <a href="img/shoe3.jpg" class="img shoe">
+                <img src="img/shoe3.jpg" alt="">
+            </a>
+            <a href="img/shoe4.jpg" class="img shoe">
+                <img src="img/shoe4.jpg" alt="">
+            </a>
+            <a href="img/watch1.jpg" class="img watch">
+                <img src="img/watch1.jpg" alt="">
+            </a>
+            <a href="img/watch2.jpg" class="img watch">
+                <img src="img/watch2.jpg" alt="">
+            </a>
+            <a href="img/watch3.jpg" class="img watch">
+                <img src="img/watch3.jpg" alt="">
+            </a>
+            <a href="img/watch4.jpg" class="img watch">
+                <img src="img/watch4.jpg" alt="">
+            </a>
+          </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.button').click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+
+                var filter =  $(this).attr('data-filter')
+
+                if(filter =='all'){
+                    $('.img').show(400);
+                }else{
+                    $('.img').not('.'+ filter).hide(200);
+                    $('.img').filter('.'+ filter).show(400);
+                }
+
+            });
+
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
